@@ -1,4 +1,6 @@
 ---
-title: Welcome to my blog
+title: Blog
 ---
 
+# This is a Header
+This is paragraph text
