@@ -11,13 +11,54 @@
 		<a href="" target="_blank">GitHub</a>
 		<a href="" target="_blank">CV</a>
 		<a href="" target="_blank">Signal</a>
-		<a href="" target="_blank">Epost</a>
+		<a href="" target="_blank" id="mail">Epost</a>
 
-		<p>
+		<a id="no" name="lang">no🇳🇴</a>
+		<a id="en" name="lang">en🇬🇧</a>
+		<a id="se" name="lang">se🇸🇪</a>
+		
+
+		<p id="greeting">
 		Hei
 		</p>
-		<p>Trykk <a href="./om.html" target="_blank">her</a> for å bli bedre kjent med meg.</p>
-		<p>Eller <a href="./avholds.html" target="_blank">her</a> for å lese min siste bloggpost.</p>
+		<p id="about">Trykk <a href="./no/om.html" target="_blank">her</a> for å bli bedre kjent med meg.</p>
+		<p id="post">Eller <a href="./no/avholds.html" target="_blank">her</a> for å lese min siste bloggpost.</p>
+
+		<script>
+			const translation = {
+				"no": {
+					"mail": "Epost",
+					"greeting": "Hei,",
+					"about": "Trykk <a href='./no/om.html' target='_blank'>her</a> for å bli bedre kjent med meg.",
+					"post": "Eller <a href='./no/avholds.html' target='_blank'>her</a> for å lese min siste bloggpost.",
+				}, 
+				"en": {
+					"mail": "Email",
+					"greeting": "Hi,",
+					"about": "Click <a href='./en/about.html' target='_blank'>here</a> to get to know me better.",
+					"post": "Or <a href='./en/teetotal.html' target='_blank'>here</a> to read my latest blogpost."
+				},
+				"se": {
+					"mail": "Epost",
+					"greeting": "Hej,",
+					"about": "Tryck <a href='' target='_blank'>här</a> för att bli bättre känd med mig.",
+					"post": "Eller <a href='' target='_blank'>här</a> för att läsa mitt senaste blogginlägg."
+				}
+			}
+
+			const languages = Object.keys(translation);
+
+			const fields = Object.keys(translation[languages[0]]);
+
+			const updateFieldsWithLanguage = (event) => {
+				fields.forEach((field) => {
+					document.getElementById(field).innerHTML = translation[event.target.id][field];
+				})
+			}
+			document.getElementsByName("lang").forEach((langEl) => {
+				langEl.onclick = updateFieldsWithLanguage;
+			});
+		</script>
 
 	</body>
 </html>
