@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="no">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>tahol.me</title>
+	</head>
+	<body>
+		<h1>Theodor A. Holme</h1>
+		<a href="" target="_blank">LinkedIn</a>
+		<a href="" target="_blank">GitHub</a>
+		<a href="" target="_blank">CV</a>
+		<a href="" target="_blank">Signal</a>
+		<a href="" target="_blank">Epost</a>
+
+		<h2>Om meg</h2>
+		<p>
+		Jeg er en <span name="age">24</span> år gammel norsk-svensk-finsk utvikler som bor i Lillestrøm og jobber for Sopra Steria i Oslo. Jeg ser på meg selv som en livslang lærer, men det er ikke så vanskelig når man bare er <span name="age">24</span>, mye mer imponerende å være en livslang lærer og 80. Jeg liker å se på filmer og har en <a href="" target="_blank">LetterBoxd</a> for det. Profesjonelt så kan du ta en titt på <a href="" target="_blank">CVen</a> min.
+		</p>
+
+		<script>
+			Array.from(document.getElementsByName('age')).forEach((spanEl) => {
+  			spanEl.innerText = Math.floor(((new Date()).getTime() - (new Date('2001-07-25')).getTime())/ (1000 * 60 * 60 * 24 * 365.25));
+			})
+		</script>
+	</body>
+</html>
