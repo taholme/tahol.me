@@ -1,0 +1,37 @@
+
+      :root {
+        --bg-color: #e0e2dc;
+        --text-color: #181918;
+      }
+
+      body.dark-mode {
+        --bg-color: #181918;
+        --text-color: #e0e2dc;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 2em;
+        font-family: hack;
+        text-align: center;
+        /* transition: background-color 0.3s ease, color 0.3s ease; */
+      }
+
+			.header {
+				display: flex;
+  			justify-content: space-between;
+  			align-items: flex-start;
+  			position: relative;
+  			top: 0;
+  			left: 0;
+  			width: 100%;
+			}
+
+      #theme-toggle {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    

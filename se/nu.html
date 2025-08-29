@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="se">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tahol.me</title>
+    <script src="./../social.js" defer></script>
+    <script src="./../navigation.js" defer></script>
+    <script src="./../theme.js" defer></script>
+    <link rel="stylesheet" href="./../style.css" />
+  </head>
+  <body>
+    <div class="header">
+			<a href="javascript:history.back()" id="back-button">Gå tillbaka</a>
+			<a id="theme-toggle">🌙</a>
+		</div>
+<h1>Theodor A. Holme</h1>
+    <a href="https://linkedin.com/in/theodor-holme">LinkedIn</a>
+    <a href="https://github.com/taholme">GitHub</a>
+    <a href="">CV</a>
+    <a href="javascript:signal()">Signal</a>
+    <a href="javascript:email()">Epost</a>
+
+    <h2>Nu</h2>
+		<p>Jag är en <span name="age">24</span> år gammal norks-svensk-finsk utväklare som bor i Lilleström och jobbar för Sopra Steria i Oslo som senior ServiceNow teknikker. Jag kollar på en del filmar och lägger ut anmeldningar på <a href="https://letterboxd.com/taholme/">LetterBoxd</a>. Profesjonelt så kan du kolla på mitt CV <a href="">här</a></p>
+    <script>
+      Array.from(document.getElementsByName("age")).forEach((spanEl) => {
+        spanEl.innerText = Math.floor(
+          (new Date().getTime() - new Date("2001-07-25").getTime()) /
+            (1000 * 60 * 60 * 24 * 365.25),
+        );
+      });
+    </script>
+  </body>
+</html>
